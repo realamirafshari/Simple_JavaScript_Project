@@ -1,0 +1,22 @@
+@import url(./setting.css);
+ul {
+  list-style: none;
+  width: 500px;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin: 10px;
+  background-color: var(--perpule);
+  border-radius: 10px;
+  color: #fff;
+}
+
+.score {
+  background-color: var(--light-perpule);
+  padding: 8px;
+  color: var(--perpule);
+  border-radius: 20px;
+}

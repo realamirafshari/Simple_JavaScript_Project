@@ -1,0 +1,222 @@
+:root {
+  --color-primary: #584a99;
+  --color-secondary: #efe8f6;
+  --color-light: #f7f7f7;
+  --color-error: #f75e4b;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  max-width: 1400px;
+  margin: auto;
+}
+header {
+  background-color: #efe8f6;
+  width: 100%;
+  color: var(--color-primary);
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+main {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 75%;
+}
+.product > div {
+  padding: 10px;
+  border-radius: 40px;
+  border: 4px solid var(--color-primary);
+  margin-bottom: 20px;
+}
+.product-cart-img {
+  width: 300px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+.product-info {
+  background-color: var(--color-secondary);
+  height: 100px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+}
+.product-info h3 {
+  font-size: 24px;
+}
+.product-info span {
+  font-size: 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+  width: 100px;
+}
+.info h3 {
+  display: block;
+  font-size: 18px; 
+}
+.info p {
+  font-size: 14px;
+}
+.action-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action-card button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: all 0.2s;
+  &:hover {
+    border-radius: 15px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
+}
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+ .title-shop {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-radius: 20px;
+  font-size: 20px;
+  color: var(--color-light);
+}
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  border-radius: 20px;
+  margin: 20px 0;
+  font-size: 20px;
+  color: var(--color-primary);
+}
+.cart-item h1 {
+  font-size: 20px;
+}
+ .total-price {
+  border-radius: 20px;
+  border: 3px solid var(--color-secondary);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.cart-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart-list > div {
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 10px;
+  border-radius: 20px;
+  gap: 20px;
+}
+ .product-img-shop {
+  width: 70px;
+  border-radius: 10px;
+}
+.action-box {
+  width: 120px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.action-button button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  margin: 0 9px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.2s;
+  &:hover {
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+  }
+}
+.remove-button {
+  width: 100%;
+}
+.remove-button button {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid var(--color-error);
+  outline: none;
+  height: 23px;
+  color: #f75e4b;
+  transition: all 0.2s;
+  &:hover {
+    background-color: var(--color-error);
+    color: var(--color-light);
+  }
+}
+.empty {
+  border: 2px solid var(--color-error);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-error);
+  width: 100%;
+  height: 100px;
+}

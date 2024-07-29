@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif ;
+}
+:root{
+    --red: #8b0000;
+    --white:#E6E6E6;
+    --black:#000000;
+}
+.header{
+    height: 80px;
+    background-color:var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+.search-filter-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+input{
+    border: 3px solid var(--red);
+    width: 240px;
+    height: 40px;
+    border-radius: 10px 0 0 10px;
+    margin-top: 17px ;
+    padding-left: 15px;
+    color: var(--red);
+    font-weight: bold;
+    font-size: 16px;
+}
+.search-input-name{
+    border-radius: 10px;
+    margin: 0 50px;
+}
+
+.search-price{
+    border: none;
+    width: 120px;
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.filter{
+    width: 100px;
+    height: 40px;
+    background-color: var(--red);
+    border: none;
+    margin: 17px 5px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.container-cart-product{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.card-product{
+    background-color: aliceblue;
+    width: 250px;
+    height: 340px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+    transition:all 0.3s ease-in-out;
+}
+
+.card-product:hover{
+    box-shadow: 0 0 10px 0px #00000066;
+}
+.card-product img{
+    width: 100%;
+    border-radius: 10px;
+}
+.prduct-title{
+    margin-top: 10px;
+    font-size: 24px;
+    color: var(--black);
+    margin: 11px 10px;
+}
+.prduct-price{
+    width: 69px;
+    height: 30px;
+    background-color: #8b0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    color: var(--white);
+    font-size: 16px;
+    margin: 15px 10px;
+}
+
+/* select button filter style */
+.selected{
+background-color: var(--white);
+border: 3px solid var(--red);
+color: var(--red);
+}

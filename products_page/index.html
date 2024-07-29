@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Prduct Page Project</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Product Page</h1>
+    </header>
+
+    <main class="container">
+      <div class="search-filter-box">
+        <div class="search-name-price">
+          <input
+            placeholder="Enter Name For Search"
+            type="text"
+            id="search-input-name"
+            class="search-input-name"
+          />
+
+          <input
+            placeholder="Enter Price"
+            type="text"
+            id="search-input-price"
+          />
+          <button class="search-price" id="search-price">Search Price</button>
+        </div>
+
+        <div class="filter-button">
+          <button class="filter selected" data-filter="all">All</button>
+          <button class="filter" data-filter="tech">Tech</button>
+          <button class="filter" data-filter="clothes">Clothes</button>
+          <button class="filter" data-filter="health">Health</button>
+        </div>
+      </div>
+
+      <div class="container-cart-product">
+        <div class="card-product" data-category="clothes">
+          <img src="./img/bag.png" alt="" />
+          <h2 class="prduct-title">Bag</h2>
+          <p class="prduct-price">120 $</p>
+        </div>
+        <div class="card-product" data-category="health">
+          <img src="./img/cream.png" alt="" />
+          <h2 class="prduct-title">Crem</h2>
+          <p class="prduct-price">120 $</p>
+        </div>
+        <div class="card-product" data-category="tech">
+          <img src="./img/iphone.png" alt="" />
+          <h2 class="prduct-title">Apple 14</h2>
+          <p class="prduct-price">1500 $</p>
+        </div>
+        <div class="card-product" data-category="clothes">
+          <img src="./img/jacket.png" alt="" />
+          <h2 class="prduct-title">Jacket</h2>
+          <p class="prduct-price">60 $</p>
+        </div>
+        <div class="card-product" data-category="health">
+          <img src="./img/shampoo.png" alt="" />
+          <h2 class="prduct-title">Shampoo</h2>
+          <p class="prduct-price">5 $</p>
+        </div>
+        <div class="card-product" data-category="clothes">
+          <img src="./img/shoes.png" alt="" />
+          <h2 class="prduct-title">Shoes</h2>
+          <p class="prduct-price">65 $</p>
+        </div>
+        <div class="card-product" data-category="health">
+          <img src="./img/vitamin.png" alt="" />
+          <h2 class="prduct-title">Vitamin</h2>
+          <p class="prduct-price">450 $</p>
+        </div>
+        <div class="card-product" data-category="tech">
+          <img src="./img/watch.png" alt="" />
+          <h2 class="prduct-title">Apple Watch</h2>
+          <p class="prduct-price">1350 $</p>
+        </div>
+        <div class="card-product" data-category="tech">
+          <img src="./img/airpods.png" alt="" />
+          <h2 class="prduct-title">Apple Airpod</h2>
+          <p class="prduct-price">55 $</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

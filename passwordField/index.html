@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/lock-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+    <title>PassWord Field</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title-box">
+          <img src="./img/lock-svgrepo-com.svg" />
+          <h3>انتخاب رمز عبور</h3>
+        </div>
+        <p class="sub-title">
+          رمز عبوری با استاندارهای مشخص شده زیر ، برای حساب خود انتخاب نمائید
+        </p>
+      </div>
+
+      <div class="inputs">
+        <input class="password-input" type="password" required />
+        <button class="show-password"><i class="ri-eye-line"></i></button>
+        <!-- <button class="show-password"></button> -->
+      </div>
+      <!-- <p>sdfdsfsdfdsfdsf</p> -->
+      <div class="standard-Password">
+        <span class="check-box" id="max-length">
+          <span class="check-tick"><i class="ri-check-double-line"></i></span> حداقل 8 کارکتر
+        </span>
+        <span class="check-box" id="upper-letter">
+          <span class="check-tick"><i class="ri-check-double-line"></i></span> استفاده از حروف بزرگ
+        </span>
+        <span class="check-box" id="lower-letter"
+          ><span class="check-tick"><i class="ri-check-double-line"></i></span> استفاده از حروف
+          کوچک
+        </span>
+        <span class="check-box" id="number-letter"
+          ><span class="check-tick"><i class="ri-check-double-line"></i></span> استفاده از اعداد
+        </span>
+        <span class="check-box" id="special-sign">
+          <span class="check-tick"><i class="ri-check-double-line"></i></span> استفاده از کاراکتر
+          های خاص
+        </span>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

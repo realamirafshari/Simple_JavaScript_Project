@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-form">
+        <div class="header">
+          <h3>Welcome Back 👋</h3>
+          <p>
+            Today is a new day. It's your day. You shape it. Sign in to start
+            managing your projects.
+          </p>
+        </div>
+        <div class="inputs">
+          <div class="input-box">
+            <label for="email-input">Email</label>
+            <input
+              type="email"
+              placeholder="Please Enter a Email"
+              required
+              id="email-input"
+            />
+          </div>
+          <div class="input-box">
+            <label for="password">Password</label>
+            <input
+              type="text"
+              placeholder="Please Enter a Password"
+              required
+              id="password-input"
+            />
+          </div>
+          <a href="#" class="forgot-btn">Forgot Password?</a>
+          <button class="login-button">log in</button>
+
+          <span class="line"><p>or</p></span>
+          <div class="log-in-social-media">
+            <div class="social-media-button">
+              <button><i class="bx bxl-google"></i>log in with Google</button>
+            </div>
+          </div>
+          <a href="../signup.html" class="create-account-button"
+            >Don't you have an account ?
+            <span class="click-sign-up">Sign up</span></a
+          >
+          <p class="copy-right">© 2024 ALL RIGHTS RESERVED</p>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <img src="../img/europeana-5TK1F5VfdIk-unsplash.jpg" alt="" />
+      </div>
+
+      <div class="success-modal">
+        <div class="modal-loader"></div>
+        <div class="content">
+          <h1>logIn account successfully</h1>
+          <p>Please wait a moment, I am transitioning to the main page.</p>
+        </div>
+      </div>
+      <div class="eror-modal">
+        <div class="modal-loader"></div>
+        <div class="content">
+          <h1>logIn account Faild</h1>
+          <p>Please check your email and password</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="../js/loginFunction.js"></script>
+  </body>
+</html>

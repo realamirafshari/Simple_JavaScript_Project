@@ -1,0 +1,28 @@
+@import "./variable.scss";
+@import "./mixin.scss";
+
+@font-face {
+  font-family: "iranyekanRegular";
+  src: url(../font/iranyekan-regular.woff) format(woff);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "iranyekanRegular", Arial, Helvetica, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #e1e7f0 #f2f3f7;
+}
+
+body {
+  width: 100%;
+  background-color: $bgColor;
+  @include flexDisplay(center, center) {
+    flex-direction: column;
+  }
+  color: $primaryBlack;
+  font-size: 1.1rem;
+}
+a {
+  text-decoration: none;
+}

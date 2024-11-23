@@ -1,0 +1,416 @@
+@import "./setting.scss";
+
+.header {
+  width: 100%;
+  height: 68px;
+  padding: 0 16px;
+  background-color: $primaryBlue;
+  position: relative;
+  @include flexDisplay(end, center);
+
+  .header-title {
+    color: $white;
+    display: none;
+  }
+  button {
+    width: 110px;
+    height: 36px;
+    background-color: $secoundBlue;
+    color: $white;
+    border-radius: 18px;
+    @include border-outline-none;
+    @include flexDisplay(center, center) {
+      gap: 6px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.header-content {
+  width: 1056px;
+  height: 88px;
+  position: absolute;
+  top: 24px;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: $white;
+  padding: 0 27px;
+  margin: auto auto;
+  @include flexDisplay(space-between, center);
+  @include boxShadow;
+  @include borderRadius;
+  img {
+    width: 88px;
+  }
+  .header-content-timer {
+    @include headerBanner;
+    width: 200px;
+    display: none;
+  }
+}
+.document-container {
+  width: 100%;
+  @include flexDisplay(center, center);
+  flex-wrap: wrap;
+}
+.main-content {
+  margin-top: 70px;
+  @include gridDisplay {
+    gap: 16px;
+  }
+}
+.form-data {
+  width: 698px;
+  @include boxContent;
+  .banner-title {
+    @include headerBanner;
+  }
+}
+.side-menu {
+  width: 341px;
+  @include boxContent;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.side-menu-timer {
+  @include headerBanner;
+  .timer {
+    font-size: 1.1rem;
+  }
+}
+
+.inputs-container {
+  width: 100%;
+  @include flexDisplay(center, center) {
+    flex-direction: column;
+    gap: 33px;
+  }
+
+  margin-top: 17px;
+}
+.input-box {
+  width: 425px;
+
+  @include flexDisplay(center, start) {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .label-title {
+    font-size: 0.9rem;
+    color: $primaryBlack;
+    font-weight: bold;
+  }
+}
+.input-value-box {
+  @include inputBox;
+}
+
+.card-date-input-container {
+  @include flexDisplay(center, center) {
+    gap: 16px;
+  }
+  width: 100%;
+
+  .input-group {
+    width: 100%;
+  }
+  .date-input {
+    width: 100%;
+    @include borderRadius;
+  }
+}
+
+.captcha-input-code,
+.otp-input-code {
+  width: 100%;
+  @include flexDisplay(center, center) {
+    gap: 10px;
+  }
+
+  .input-value-box {
+    width: 60%;
+  }
+  .captcha-value {
+    @include secoundContainer;
+    overflow: hidden;
+    h3 {
+      color: $white;
+
+      transform: skew(20deg, 5deg);
+    }
+  }
+}
+
+.voice-captcha-container {
+  @include flexDisplay(end, center);
+  width: 100%;
+  padding: 0 0 0 16px;
+  .play-voice-captcha-button {
+    height: 24px;
+    @include flexDisplay(center, center) {
+      gap: 5px;
+    }
+    @include border-outline-none;
+    background-color: transparent;
+
+    i {
+      color: $primaryBlue;
+      font-size: 1.2rem;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+.send-otp-button {
+  @include secoundContainer;
+  background-color: $primaryBlue;
+  color: $white;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+
+    opacity: 0.8;
+  }
+}
+
+.confirm-modal {
+  @include modalStyle($lightGreen, $primaryGreen, $primaryGreen);
+  transition: all 0.6s ease-in-out;
+}
+
+.accept-rouls {
+  @include flexDisplay(start, center) {
+    gap: 10px;
+  }
+  width: 100%;
+
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: $primaryBlue; /* رنگ تیک باکس */
+    border-radius: 90px;
+  }
+}
+
+.operation-button {
+  width: 100%;
+  @include flexDisplay(center, center) {
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  .confirm-operation {
+    @include operationButton($primaryGreen);
+    color: $white;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+
+      opacity: 0.8;
+    }
+  }
+  .loader-confirm-button {
+    width: 25px;
+    height: 25px;
+    @include flexDisplay(center, center);
+    background-color: transparent;
+    border: 2px solid $primaryGray;
+    border-radius: 50px;
+    border-top-color: $white;
+    display: none;
+  }
+  .cancel-operation {
+    @include operationButton(transparent);
+    border: 1px solid $primaryGray;
+    color: $red;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+  }
+}
+
+.report-email-sms {
+  @include flexDisplay(center, center) {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+.sms-report-button {
+  width: 100%;
+  @include flexDisplay(center, center) {
+    gap: 6px;
+  }
+  @include border-outline-none;
+  background-color: transparent;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  p {
+    text-align: start;
+    font-size: 0.88rem;
+  }
+  .sms-report-container-icon {
+    @include flexDisplay(center, center);
+    height: 100%;
+    i {
+      font-size: 1.5rem;
+      color: $primaryBlue;
+    }
+  }
+}
+
+.user-email-phone {
+  width: 100%;
+  height: 0;
+  @include flexDisplay(center, center) {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .input-box .email-input-container,
+  .input-box .phone-number-input-container {
+    width: 100%;
+  }
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+}
+// --------------- SIDE MENU STYLE --------------------------------------
+
+.logo-container {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 30px;
+  @include flexDisplay(center, center);
+  img {
+    width: 100%;
+  }
+}
+.line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $lightGray;
+  border-radius: 50px;
+}
+
+.information-container {
+  @include flexDisplay(start, center) {
+    flex-direction: column;
+    gap: 32px;
+  }
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.shoping-name-box {
+  @include informationBox;
+}
+.price-box {
+  @include informationBox;
+  .info-content h3 {
+    font-size: 1.5rem;
+  }
+  justify-content: space-between;
+}
+.pay-system-name-box {
+  @include informationBox;
+}
+.pay-system-website-box {
+  @include informationBox;
+}
+.open-close-side-bar {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: $white;
+  @include flexDisplay(end, center);
+  padding: 15px 20px;
+  display: none;
+  .button-show-more {
+    width: 84px;
+    height: 36px;
+    background-color: $inputBgColor;
+    @include border-outline-none;
+    @include flexDisplay(center, center);
+    border-radius: 50px;
+    transition: all 0.2s ease-in-out;
+    // display: none;
+    &:hover {
+      cursor: pointer;
+      background-color: $primaryGray;
+      color: $white;
+    }
+  }
+}
+.acardeon-menu-container {
+  width: 100%;
+  margin: 16px 0;
+  @include flexDisplay(center, center) {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .acardeon-item {
+    @include borderRadius;
+    background-color: $white;
+    width: 1056px;
+    padding: 16px;
+    @include flexDisplay(end, end) {
+      flex-direction: column;
+      // gap: 16px;
+    }
+  }
+  .banner-title {
+    @include headerBanner;
+    span {
+      @include flexDisplay(center, center);
+      display: none;
+    }
+  }
+  .acardeon-content {
+    width: 1000px;
+    padding: 0 16px 0 10px;
+    text-align: justify;
+    color: $primaryBlack;
+    margin-top: 10px;
+    ul {
+      @include flexDisplay(center, start) {
+        flex-direction: column;
+        gap: 12px;
+      }
+      font-size: 0.87rem;
+    }
+  }
+  .more-mesaage {
+    list-style: none;
+    margin-top: 10px;
+  }
+  .link-acardeon {
+    color: $primaryBlue;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .link-to-website {
+    color: $red;
+  }
+}
+
+.footer-section {
+  @include footer();
+}
+@import "./responsive.scss";
+@import "./jsVariable.scss";

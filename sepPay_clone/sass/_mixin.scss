@@ -1,0 +1,212 @@
+@mixin flexDisplay($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  @content;
+}
+@mixin gridDisplay() {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  @content;
+}
+
+@mixin borderRadius() {
+  border-radius: 12px;
+}
+
+@mixin boxShadow() {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+@mixin boxContent() {
+  padding: 16px;
+  background-color: $white;
+  @include borderRadius;
+  @include boxShadow;
+  padding-bottom: 32px;
+  @content;
+}
+
+@mixin headerBanner() {
+  width: 100%;
+  height: 52px;
+  border-radius: 8px;
+  background-color: $lightBlue;
+  font-size: 0.8rem;
+  color: $primaryBlue;
+  padding: 0 16px;
+  @include flexDisplay(space-between, center);
+}
+
+@mixin border-outline-none() {
+  border: none;
+  outline: none;
+  @content;
+}
+
+@mixin inputBox() {
+  width: 425px;
+  height: 48px;
+  background-color: $inputBgColor;
+  border: 1px solid $lightGray;
+  position: relative;
+  @include flexDisplay(center, center);
+  @include borderRadius;
+  .input-group {
+    width: 100%;
+    height: 100%;
+    @include flexDisplay(center, center) {
+      gap: 10px;
+    }
+  }
+  input {
+    width: 97%;
+    height: 80%;
+    font-size: 1.1rem;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    @include border-outline-none();
+  }
+  .bank-logo-input {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    @include flexDisplay(center, center);
+    // display: none;
+  }
+  .input-button {
+    padding: 8px 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    font-size: 1.5rem;
+    color: $primaryBlue;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out;
+    @include flexDisplay(center, center);
+    @include borderRadius;
+    @include border-outline-none;
+    &:hover {
+      cursor: pointer;
+      background-color: $lightGray;
+    }
+  }
+}
+
+@mixin secoundContainer() {
+  @include inputBox;
+  width: 40%;
+  @include borderRadius;
+  @include flexDisplay(center, center);
+}
+
+@mixin operationButton($bgColor) {
+  @include flexDisplay(center, center);
+  width: 100%;
+  height: 48px;
+  @include borderRadius;
+  @include border-outline-none;
+  background-color: $bgColor;
+  font-size: 1rem;
+  @content;
+}
+
+@mixin informationBox() {
+  @include flexDisplay(start, center) {
+    gap: 15px;
+  }
+  width: 100%;
+
+  .info-icon {
+    @include flexDisplay(center, center) {
+      gap: 15px;
+    }
+  }
+
+  .info-icon i {
+    font-size: 2rem;
+    color: $primaryGray;
+  }
+  .info-content {
+    @include flexDisplay(center, start) {
+      flex-direction: column;
+      gap: 6px;
+    }
+    p {
+      font-size: 0.7rem;
+      color: $primaryGray;
+    }
+    h3 {
+      font-size: 1rem;
+      color: $primaryBlack;
+    }
+  }
+}
+
+@mixin modalStyle($bgColor, $borderColor, $color) {
+  width: 100%;
+  background-color: $bgColor;
+  margin: 1rem 0;
+  border: 1px solid $borderColor;
+  color: $color;
+  @include borderRadius;
+  @include flexDisplay(center, center);
+  padding: 16px;
+  font-size: 0.9rem;
+  line-height: 22px;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  display: none;
+
+  .title-container {
+    width: 100%;
+    margin-bottom: 5px;
+    .title {
+      @include flexDisplay(space-between, center);
+      // width: 100%;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    .modal-description {
+      text-align: justify;
+    }
+  }
+
+  .close-modal {
+    background-color: transparent;
+    font-size: 1.5rem;
+    @include border-outline-none;
+    @include flexDisplay(start, start);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin footer() {
+  width: 100%;
+  background-color: $primaryBlue;
+  height: 300px;
+  padding: 32px 0 16px 0;
+  color: $white;
+  @include flexDisplay(space-between, center) {
+    flex-direction: column;
+    gap: 32px;
+  }
+  img {
+    width: 117px;
+  }
+  .footer-title,
+  .footer-text {
+    @include flexDisplay(center, center) {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+  @content;
+}

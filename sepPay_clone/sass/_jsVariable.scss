@@ -1,0 +1,32 @@
+@import "./variable.scss";
+input {
+  direction: ltr;
+}
+.close-side-menu {
+  height: 700px;
+}
+.active-opt-button {
+  background-color: transparent;
+  border: 2px solid $primaryBlue;
+  color: $primaryBlue;
+}
+.active-modal {
+  display: block;
+}
+.active-report-section {
+  height: 160px;
+}
+.acardeon-item.open-acrdeon .acardeon-content {
+  display: block;
+}
+.show-bank-logo {
+  display: block;
+}
+
+.cart-list.hide {
+  display: none;
+}
+
+.inputValueBox.eror {
+  border: 2px solid red;
+}

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./img/favIcon.png" type="image/x-icon" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>درگاه پرداخت اینترنتی سِپ - پرداخت الکترونیک سامان</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-button-title">
+        <h3 class="header-title">درگاه پرداخت اینترنتی سِپ</h3>
+        <button class="change-lang"><i class="bx bx-world"></i> English</button>
+      </div>
+
+      <div class="header-content">
+        <img src="./img/sepLogo.png" alt="Sep-Logo" />
+        <h3 class="header-content-title">درگاه پرداخت اینترنتی سِپ</h3>
+
+        <div class="header-content-timer">
+          <h3 class="title-timer">زمان باقی مانده :</h3>
+          <h3 class="timer-container">10:00</h3>
+        </div>
+
+        <img src="./img/shaparak.svg" alt="Shaparak-logo" />
+      </div>
+    </header>
+
+    <main class="document-container">
+      <div class="main-content">
+        <main class="form-data">
+          <div class="banner-title">
+            <h3>اطلاعات کارت خود را وارد کنید</h3>
+          </div>
+
+          <div class="inputs-container">
+            <div class="input-box">
+              <label class="label-title">شماره کارت</label>
+              <label for="card-number" class="card-number">
+                <div class="input-value-box">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      maxlength="19"
+                      id="card-number"
+                      placeholder="60** **** **** ****"
+                      required
+                    />
+                  </div>
+                  
+                  <button class="cart-list input-button">
+                    <i class="bx bx-credit-card"></i>
+                  </button>
+                  <img class="bank-logo-input" src="" alt="">
+                </div>
+              </label>
+            </div>
+
+            <div class="input-box">
+              <label class="label-title">شماره شناسایی دوم ( CVV2 )</label>
+              <label for="cvv2-number" class="cvv2-number">
+                <div class="input-value-box">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      placeholder="CVV2"
+                      maxlength="4"
+                      id="cvv2-number"
+                      required
+                    />
+                  </div>
+                  <button class="input-button">
+                    <i class="bx bx-dialpad-alt"></i>
+                  </button>
+                </div>
+              </label>
+            </div>
+
+            <div class="input-box">
+              <label class="label-title">تاریخ انقضا</label>
+              <div class="card-date-input-container">
+                <label for="date-years">
+                  <div class="input-value-box date-input">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        placeholder="ماه"
+                        maxlength="2"
+                        id="date-years"
+                        required
+                      />
+                    </div>
+                  </div>
+                </label>
+                <label for="date-month">
+                  <div class="input-value-box date-input">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        placeholder="سال"
+                        maxlength="2"
+                        id="date-month"
+                        required
+                      />
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <label class="label-title">کد امنیتی</label>
+
+              <label for="captcha-input" class="captcha-input-code">
+                <div class="input-value-box">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      maxlength="6"
+                      id="captcha-input"
+                      required
+                    />
+                  </div>
+
+                  <button class="input-button refresh-captcha">
+                    <i class="bx bx-refresh"></i>
+                  </button>
+                </div>
+                <div class="captcha-value"></div>
+              </label>
+              <div class="voice-captcha-container">
+                <button class="play-voice-captcha-button">
+                  <i class="bx bx-volume-full"></i> پخش صوتی
+                </button>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <label class="label-title">رمز عبور </label>
+
+              <label for="otp-input" class="otp-input-code">
+                <div class="input-value-box">
+                  <div class="input-group">
+                    <input type="text" maxlength="6" id="otp-input" required />
+                  </div>
+
+                  <button class="input-button">
+                    <i class="bx bx-dialpad-alt"></i>
+                  </button>
+                </div>
+                <button class="send-otp-button">درخواست رمز پویا</button>
+              </label>
+
+              <div class="confirm-modal">
+                <div class="icon-container">
+                  <div class="title-container">
+                    <p class="title">
+                      رمز یکبار مصرف برای شما ارسال گردیده است
+
+                      <button class="close-modal" id="close-warning-modal">
+                        <i class="bx bx-x"></i>
+                      </button>
+                    </p>
+                    <p class="modal-description">
+                      مشتری گرامی ، در صورتی که از صحت اطلاعات وارد شده اطمینان
+                      دارید ولی هنوز رمز دوم پویای خود را دریافت ننموده اید
+                      مجددا دکمه درخواست رمز پویا را بقشارید . در غیر اینصورت
+                      برای رفع مشکل به بانک صادر کننده کارت خود مراجعه فرمایید .
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <label class="accept-rouls">
+                <input type="checkbox" id="accept-rouls" />شماره کارت در
+                درگاه‌های سِپ ذخیره شود
+              </label>
+            </div>
+
+            <div class="input-box">
+              <div class="operation-button">
+                <button class="confirm-operation">
+                  پرداخت
+                  <span style="margin: 0 4px; font-size: 1.1rem">
+                    129.200
+                  </span>
+                  ریال
+                </button>
+                <button class="cancel-operation">انصراف</button>
+              </div>
+            </div>
+
+            <div class="input-box report-email-sms">
+              <button class="sms-report-button">
+                <div class="sms-report-container-icon">
+                  <i class="bx bxs-plus-circle"></i>
+                </div>
+                <p>
+                  مایلید اطلاعات پرداخت را به صورت ایمیل و پیامک دریافت کنید ؟
+                  (اختیاری)
+                </p>
+              </button>
+
+              <div class="user-email-phone">
+                <div class="input-box">
+                  <label class="label-title">ایمیل</label>
+                  <div class="email-input-container">
+                    <label for="email-input">
+                      <div class="input-value-box">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            placeholder="mail@domain.com"
+                            id="email-input"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="input-box">
+                  <label class="label-title">شماره تلفن </label>
+                  <div class="phone-number-input-container">
+                    <label for="phone-number">
+                      <div class="input-value-box">
+                        <div class="input-group">
+                          <input
+                            type="text"
+                            placeholder="09*********"
+                            maxlength="11"
+                            id="phone-number"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <aside class="side-menu">
+          <div class="side-menu-timer">
+            <h3>زمان باقی مانده :</h3>
+            <h3 class="timer-container">10:00</h3>
+          </div>
+
+          <div class="logo-container">
+            <img src="./img/shopLogo/digikala.svg" alt="" />
+          </div>
+
+          <span class="line"></span>
+
+          <div class="information-container">
+            <div class="shoping-name-box">
+              <div class="info-icon"><i class="bx bxs-store"></i></div>
+              <div class="info-content">
+                <p>پذیرنده</p>
+                <h3>دیجی کالا</h3>
+              </div>
+            </div>
+
+            <div class="price-box">
+              <div class="info-icon">
+                <i class="bx bxs-store"></i>
+                <div class="info-content">
+                  <p>مبلغ</p>
+                  <h3>14.123.456 ریال</h3>
+                  <p>یک میلیون و چهارصد هزار تومان</p>
+                </div>
+              </div>
+            </div>
+            <!-- <button class="show-more">نمایش بیشتر</button> -->
+
+            <span class="line"></span>
+
+            <div class="pay-system-name-box">
+              <div class="info-icon"><i class="bx bxs-wallet"></i></div>
+              <div class="info-content">
+                <p>پرداخت یار</p>
+                <h3>راهکار نوین زیبال</h3>
+              </div>
+            </div>
+
+            <div class="pay-system-name-box">
+              <div class="info-icon"><i class="bx bxs-store-alt"></i></div>
+              <div class="info-content">
+                <p>شماره پذیرنده / ترمینال</p>
+                <h3>123456789</h3>
+              </div>
+            </div>
+            <div class="pay-system-website-box">
+              <div class="info-icon"><i class="bx bx-world"></i></div>
+              <div class="info-content">
+                <p>وبسایت پذیرنده</p>
+                <h3>digikala.com</h3>
+              </div>
+            </div>
+            <span class="line"></span>
+          </div>
+
+          <div class="open-close-side-bar">
+            <button class="button-show-more">بیشتر</button>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <section class="acardeon-menu-container">
+      <div class="acardeon-item">
+        <div class="banner-title">
+          <h3>نکته امنیتی</h3>
+          <span class="show-acardeon-content"
+            ><i class="bx bxs-down-arrow"></i
+          ></span>
+        </div>
+        <div class="acardeon-content">
+          <ul>
+            <li>
+              دارنده محترم کارت بانکی، با مراجعه به بانک خود یا یکی از روشهای
+              مورد نظر بانک شما، به منظور تایید شماره همراه و پویاسازی رمز دوم
+              کارت خود اقدام نمایید.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acardeon-item">
+        <div class="banner-title">
+          <h3>راهنمای استفاده از رمز پویا</h3>
+          <span><i class="bx bxs-down-arrow"></i></span>
+        </div>
+        <div class="acardeon-content">
+          <ul>
+            <li>
+              رمز پویا رمز یکبار مصرفی است که به جای رمز دوم کارت استفاده می‌شود
+              .
+            </li>
+
+            <li>
+              مرحله اول : بر اساس دستورالعمل بانک صادرکننده کارت خود ، نسبت به
+              فعال سازی رمز پویا اقدام نمایید .
+            </li>
+
+            <li>
+              مرحله دوم : رمز پویا را بر اساس روش اعلامی از طرف بانک صادر کننده
+              کارت ، به یکی از روش‌های زیر دریافت کنید .
+              <ul class="more-mesaage">
+                <li>
+                  1 - دریافت از طریق برنامه کاربردی بانک، اینترنت بانک و یا
+                  موبایل بانک.
+                </li>
+                <li>2 - دریافت از طریق کد USSD بانک صادر کننده کارت شما.</li>
+                <li>
+                  3 - دریافت از طریق زدن دکمه "دریافت رمز پویا" در درگاه پرداخت
+                  اینترنتی.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              مرحله سوم: پس از دریافت رمز به یکی از روش‌های فوق، رمز پویای
+              دریافت شده را در محل تعیین شده برای "رمز دوم" وارد نمایید و سپس
+              مابقی اطلاعات را تکمیل نمایید.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="acardeon-item">
+        <div class="banner-title">
+          <h3>راهنما و نکات امنیتی</h3>
+          <span><i class="bx bxs-down-arrow"></i></span>
+        </div>
+        <div class="acardeon-content">
+          <ul>
+            <li>
+              شماره کارت: 16 رقمی بوده و بصورت 4 قسمت 4 رقمی روی کارت درج شده
+              است.
+            </li>
+            <li>
+              شماره شناسایی دوم (CVV2): شماره شناسایی کارت با طول 3 یا 4 رقم
+              کنار شماره کارت و یا پشت کارت درج شده است.
+            </li>
+            <li>
+              تاریخ انقضا: شامل دو بخش ماه و سال انقضا در کنار شماره کارت درج
+              شده است.
+            </li>
+            <li>
+              رمز دوم: با عنوان رمز دوم و در برخی موارد با PIN2 شناخته می‌شود،
+              از طریق بانک صادر کننده کارت تولید شده و همچنین از طریق دستگاه‌های
+              خودپرداز بانک صادر کننده قابل تهیه و یا تغییر می‌باشد.
+            </li>
+            <li>
+              کد امنیتی: بخشی از محتوای صفحه پرداخت است و لازم است برای ادامه
+              فرآیند خرید، کد موجود که به صورت عددی در تصویر مشخص شده است در محل
+              پیش بینی شده درج شود.
+            </li>
+            <li>
+              درگاه پرداخت اینترنتی سامان با استفاده از پروتکل امن SSL به
+              مشتریان خود ارائه خدمت نموده و با آدرس
+              <a
+                href="https://sep.shaparak.ir"
+                class="link-acardeon link-to-website"
+                >https://sep.shaparak.ir</a
+              >
+              شروع می‌شود. خواهشمند است به منظور جلوگیری از سوء استفاده‌های
+              احتمالی پیش از ورود هرگونه اطلاعات، آدرس موجود در بخش مرورگر وب
+              خود را با آدرس فوق مقایسه نمایید و در صورت مشاهده هر نوع مغایرت
+              احتمالی، موضوع را با ما در میان بگذارید
+            </li>
+            <li>
+              از صحت نام فروشنده و مبلغ نمایش داده شده، اطمینان حاصل فرمایید.
+            </li>
+            <li>
+              برای جلوگیری از افشای رمز کارت خود، حتی المقدور از صفحه کلید مجازی
+              استفاده فرمایید.
+            </li>
+            <li>
+              برای کسب اطلاعات بیشتر، گزارش فروشگاه‌های مشکوک و همچنین اطلاع از
+              وضعیت پذیرندگان اینترنتی می‌توانید با شماره
+              <span class="link-acardeon"> 021-84080 </span> تماس بگیرید و یا از
+              طریق آدرس ایمیل
+              <span class="link-acardeon" href="#">epay@sep.ir</span> اقدام
+              نمایید.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-section">
+      <img src="./img/sepLogoFooter.svg" alt="" />
+      <div class="footer-title">
+        <h3>شرکت پرداخت الکترونیک سامان (سهامی عام)</h3>
+        <p>2008 - 2024</p>
+      </div>
+      <div class="footer-text">
+        <p>
+          تمامی حقوق این محصول متعلق به سِپ ( پرداخت الکترونیک سامان کیش )
+          می‌باشد.
+        </p>
+        <p>مرکز شبانه روزی ارتباط با مشتریان : 021-84080</p>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "iranyekanRegular";
+  src: url(../font/iranyekan-regular.woff) format(woff);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "iranyekanRegular", Arial, Helvetica, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #e1e7f0 #f2f3f7;
+}
+
+body {
+  width: 100%;
+  background-color: #f7f7fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #2d3a4a;
+  font-size: 1.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f7f7fc;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  background-color: white;
+  width: 50%;
+  height: 50%;
+  margin: auto auto;
+  color: #F63A53;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+.container a {
+  background-color: #2b73e3;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  font-size: 1rem;
+}/*# sourceMappingURL=404page_Style.css.map */
